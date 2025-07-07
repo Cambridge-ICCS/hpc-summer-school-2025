@@ -112,6 +112,16 @@ The LINPACK benchmarks appeared initially as part of the LINPACK user's manual. 
 
 ## Top500 list
 
+- The top 500 systems in the world (that you're allowed to know about), ranked according to performance on HPL
+- Released twice per year at ISC and SC conferences
+- Good historical record
+- Maybe not a representative proxy of modern workloads
+  - HPCG
+  - HPL-MxP
+
+![](imgs/Top500_logo.png){width=35% fig-align="center"}
+
+
 ## Exercise 1
 
 Got to the Top500 site at https://top500.org/
