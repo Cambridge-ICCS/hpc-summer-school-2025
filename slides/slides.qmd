@@ -401,6 +401,8 @@ cd example-code
 gcc -fopenmp -O3 pi.c -o pi.exe
 ```
 
+---
+
 ### What might be causing this?
 
 - The problem is "pleasingly parallel"
@@ -409,6 +411,8 @@ gcc -fopenmp -O3 pi.c -o pi.exe
   - Non-unifrom memory architecture
   - differing latencies from cores to main memory
 - First touch placement policy.
+
+---
 
 ### ls-topo
 
@@ -433,7 +437,7 @@ gcc -fopenmp -O3 pi.c -o pi.exe
 
 int main(int argc, char** argv) {
     // Initialize the MPI environment
-    MPI_Init(NULL, NULL);
+    MPI_Init(argc, argv);
 
     // Get the number of processes
     int world_size;
@@ -458,7 +462,7 @@ int main(int argc, char** argv) {
 ```
 ---
 
-### Building MPI PRograms
+### Building MPI Programs
 
 Build:
 
@@ -476,7 +480,7 @@ mpiexec -np 4 ./mpi-hello.exe
 
 - Build ``mpi-hello.c``
 - Write a job script to run on 2 nodes, 3 cores per node
-  - (np whouls be 2*3 = 6)
+  - (`-np` would be 2*3 = 6)
 
 ## programming HPC
 ### GPU offloading
